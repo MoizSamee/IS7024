@@ -5,6 +5,7 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
 using QuickType;
@@ -13,6 +14,12 @@ namespace Covinator.Pages
 {
     public class UsCaseDeathsModel : PageModel
     {
+        private ILogger<UsCaseDeathsModel> _logger;
+
+        public UsCaseDeathsModel(ILogger<UsCaseDeathsModel> logger)
+        {
+            _logger = logger;
+        }
         /*public void OnGet()
         {
             using (var webClient = new WebClient())
@@ -54,8 +61,10 @@ namespace Covinator.Pages
                 }
                 else
                 {
+                    _logger.LogError("US Cases and deaths json validation failed");
                     foreach (string evt in validationEvents)
                     {
+                        _logger.LogWarning($"Error while validating US cases and deaths schema {evt}");
                         Console.WriteLine(evt);
                         ViewData["ModernaVaccineDistributionAllocations"] = new ModernaVaccineDistributionAllocations();
                     }

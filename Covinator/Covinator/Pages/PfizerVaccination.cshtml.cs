@@ -67,10 +67,12 @@ namespace Covinator.Pages
                 else
                 {
 
-
+                    _logger.LogError("pfizer json validation failed");
                     foreach (string evt in validationEvents)
                     {
-                        Console.WriteLine(evt);
+                        
+                        _logger.LogWarning($"Error while validating pfizer schema {evt}");
+                        /*Console.WriteLine(evt);*/
                         ViewData["PfizerVaccineDistributionAllocations"] = new PfizerVaccineDistributionAllocations []{ };
                         
                     }

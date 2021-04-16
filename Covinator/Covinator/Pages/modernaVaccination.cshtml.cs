@@ -66,11 +66,12 @@ namespace Covinator.Pages
                 }
                 else
                 {
-
+                    _logger.LogError("moderna json validation failed");
 
                     foreach (string evt in validationEvents)
                     {
-                        Console.WriteLine(evt);
+                        _logger.LogWarning($"Error while validating moderna schema {evt}");
+                        /*Console.WriteLine(evt);*/
                         ViewData["ModernaVaccineDistributionAllocations"] = new ModernaVaccineDistributionAllocations[] { };
 
                     }
