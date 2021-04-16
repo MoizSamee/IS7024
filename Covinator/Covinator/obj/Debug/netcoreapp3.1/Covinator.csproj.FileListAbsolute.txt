@@ -248,3 +248,5 @@ D:\XML Final Project\Covinator\Covinator\obj\Debug\netcoreapp3.1\Covinator.dll
 D:\XML Final Project\Covinator\Covinator\obj\Debug\netcoreapp3.1\Covinator.pdb
 D:\XML Final Project\Covinator\Covinator\obj\Debug\netcoreapp3.1\Covinator.genruntimeconfig.cache
 C:\Users\Moiz\OneDrive\Documents\GitHub\IS7024\IS7024\Covinator\Covinator\obj\Debug\netcoreapp3.1\Razor\Pages\TopRecepies.cshtml.g.cs
+C:\Users\vpsap\OneDrive\Documents\GitHub\IS7024\Covinator\Covinator\obj\Debug\netcoreapp3.1\Razor\Pages\AboutUs.cshtml.g.cs
+C:\Users\vpsap\OneDrive\Documents\GitHub\IS7024\Covinator\Covinator\obj\Debug\netcoreapp3.1\Razor\Pages\TopRecepies.cshtml.g.cs
