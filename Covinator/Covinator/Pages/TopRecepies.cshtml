@@ -1,0 +1,37 @@
+﻿@page
+@model Covinator.Pages.TopRecepiesModel
+@{
+    ViewData["Title"] = "Pfizer Vaccination";
+    
+    @*var recepies = ViewData["Recepies"];*@
+    var recipes = (QuickType.Welcome[])ViewData["Recepies"];
+    @*var result = QuickType.Recipe.FromJson(recipes.ToString());*@
+
+}
+<h1> Are you hungry??</h1>
+<h3>Check out these amazing recipes</h3>
+<table class="table table-striped">
+    <tr>
+        <th>Photo</th>
+        <th>Title</th>
+        <th>Link to Dish</th>
+        <th>Publisher </th>
+
+    </tr>
+
+    @foreach (QuickType.Welcome results in recipes)
+    {
+        <tr>
+            <td><img src=@results.Recipe.ImageUrl width="600" height="300" > </td>
+            <td>@results.Recipe.Title </td>
+            <td><a href=@results.Recipe.SourceUrl>click here</a></td>
+            <td><a href=@results.Recipe.PublisherUrl> click here</a> </td>
+            
+
+
+        </tr>
+
+    }
+
+    
+</table>
